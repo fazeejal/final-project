@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <!-- breadcrumb-area start -->
+    <div class="breadcrumb-area" style="position: relative;">
+        <div class="breadcrumb-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('{% static 'assets\images\about\e-learning-concept-isometric-mobile-or-smartphone-and-cloud-computing-for-study-on-orange-background-online-study-from-home-online-course-e-book-store-free-vector.jpg' %}'); background-size: cover; background-position: center;"></div>
+        <div class="breadcrumb-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.5);"></div>
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 text-center">
+                    <h2 class="breadcrumb-title" style="color: #000; font-size: 48px; margin-bottom: 10px; text-shadow: 3px 3px 6px rgba(0,0,0,0.8); position: relative; z-index: 1;">About Us</h2>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- breadcrumb-area end -->
+        <!-- About section Start -->
+        <div class="about-area pt-100px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="about-wrapper text-center">
+                            <div class="about-contant">
+                                <h2 class="title" style="color: #333; font-size: 48px; font-weight: bold; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                    <span style="color:black; ;">Explore</span> the World of Books
+                                </h2>
+                                <div class="paragraphs" style="text-align: left;">
+                                <div style="text-align:center;"><p>Welcome to BookHive, your one-stop destination for all things books! We are passionate about literature and aim to provide a curated collection of books across various genres to cater to every reader's taste.
+                                At BookHive, we believe in the power of storytelling and the joy of reading. Whether you're looking for bestsellers,classics, or hidden gems, we have something for everyone. Our mission is to connect readers with their next favorite book and create a vibrant community of book lovers.
+                                Explore our wide range of books, enjoy special offers, and immerse yourself in the world of literature with BookHive. Happy reading!</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>Our Vision</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div>
+                                        <a href="{% url 'product' %}"><img src="{% static 'assets\images\about\best inspirational book.jpg'%}" alt="Site Logo" style="height: 400px;width: 300px;"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div style="text-align: center;">
+                                        <p>At BookHive, our vision is to inspire a love for reading and make quality books accessible to everyone. We believe that books have the power to ignite imagination, broaden perspectives, and spark meaningful conversations. Our goal is to curate a diverse collection of books that cater to different interests, ages, and genres, ensuring that every reader can find something they love. By promoting literacy and a passion for reading, we aim to contribute to a more knowledgeable, empathetic, and interconnected society. Join us in our mission to celebrate the joy of reading and create a world where books are cherished and shared, enriching lives one page at a time.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About section End -->
+{% endblock %}

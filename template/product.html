@@ -1,0 +1,220 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block body %}
+<!-- Shop Page Start  -->
+<div class="shop-category-area pt-100px pb-100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 order-lg-last col-md-12 order-md-first">
+                <!-- Shop Top Area Start -->
+                <div class="shop-top-bar d-flex">
+                    <p class="compare-product"> <span>12</span> Product Found of <span>30</span></p>
+                    <!-- Left Side End -->
+                    <div class="shop-tab nav">
+                        <button class="active" data-bs-target="#shop-grid" data-bs-toggle="tab">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                                <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+                              </svg>
+                        </button>
+                        <button data-bs-target="#shop-list" data-bs-toggle="tab">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+                                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                                <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                              </svg>
+                        </button>
+                    </div>
+                    <!-- Right Side Start -->
+                    <div class="select-shoing-wrap d-flex align-items-center">
+                        <div class="shot-product">
+                            <p>Sort By:</p>
+                        </div>
+                        <!-- Single Wedge End -->
+                        <div class="header-bottom-set dropdown">
+                            <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown">Default <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                              </svg></button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a class="dropdown-item" href="/product/{% for i in product %}?ATOZ={{i.id}}{% endfor %}">Name:A to Z</a></li>
+                                <li><a class="dropdown-item" href="/product/{% for j in product %}?ZTOA={{j.id}}{% endfor %}">Name:Z to A</a></li>
+                                <li><a class="dropdown-item" href="/product/{% for i in product %}?LTOH={{i.id}}{% endfor %}">Price:low to high</a></li>
+                                <li><a class="dropdown-item" href="/product/{% for i in product %}?HTOL={{i.id}}{% endfor %}">Price: high to low</a></li>">Price, high to low</a></li>
+                                <li><a class="dropdown-item" href="/product/{% for i in product %}?NEW={{i.id}}{% endfor %}">Sort By new</a></li>
+                                <li><a class="dropdown-item" href="/product/{% for i in product %}?OLD={{i.id}}{% endfor %}">Sort By old</a></li>
+                            </ul>
+                        </div>
+                        <!-- Single Wedge Start -->
+                    </div>
+                    <!-- Right Side End -->
+                </div>
+                <!-- Shop Top Area End -->
+                <!-- Shop Bottom Area Start -->
+                <div class="shop-bottom-area">
+                    <!-- Tab Content Area Start -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="shop-grid">
+                                    <div class="row mb-n-30px">
+                                        {% for i in product %}
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                            <!-- Single Prodect -->
+                                            <div class="product">
+                                                <span class="badges">
+                                                <span class="new">{{i.Condition}}</span>
+                                                </span>
+                                                <div class="thumb">
+                                                    <a href="single-product.html" class="image">
+                                                        <img src={{i.image.url}} alt="Product" style="width: auto; height: 400px; object-fit: cover;"/>
+                                                        <img class="hover-image" src={{i.image.url}} alt="Product" style="width: auto; height: 400px; object-fit: cover;"/>
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <span class="category"><a href="#">{{i.catagory}}</a></span>
+                                                    <h5 class="title"><a href="single-product.html">{{i.name}}
+                                                        </a>
+                                                    </h5>
+                                                    <span class="price">
+                                                    <span class="new">{{i.price}}</span>
+                                                    </span>
+                                                </div>
+                                                <div class="actions">
+                                                    <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal" data-bs-target="#exampleModal-Cart-{{forloop.counter}}"><i
+                                                        class="pe-7s-shopbag"></i></button>
+                                                    <button class="action wishlist" title="Wishlist" data-bs-toggle="modal" data-bs-target="#exampleModal-Wishlist-{{forloop.counter}}"><i
+                                                            class="pe-7s-like"></i></button>
+                                                    <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal-{{forloop.counter}}"><i class="pe-7s-look"></i></button>
+                                                    <button class="action compare" title="Compare" data-bs-toggle="modal" data-bs-target="#exampleModal-Compare"><i
+                                                            class="pe-7s-refresh-2"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade mb-n-30px" id="shop-list">
+                                    {% for i in product %}
+                                    <div class="shop-list-wrapper mb-30px">
+                                        <div class="row">
+                                            <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
+                                                <div class="product">
+                                                    <div class="thumb">
+                                                        <a href="single-product.html" class="image">
+                                                            <img src={{i.image.url}} alt="Product" />
+                                                            <img class="hover-image" src={{i.image.url}} alt="Product" />
+                                                        </a>
+                                                        <span class="badges">
+                                                        <span class="new">{{i.Condition}}</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 col-lg-7 col-xl-8">
+                                                <div class="content-desc-wrap">
+                                                    <div class="content">
+                                                        <span class="category"><a href="#">{{i.catagory}}</a></span>
+                                                        <h5 class="title"><a href="single-product.html">{{i.name}}</a></h5>
+                                                        <p>{{i.discription}} </p>
+                                                    </div>
+                                                    <div class="box-inner">
+                                                        <span class="price">
+                                                        <span class="new">{{i.price}}</span>
+                                                        </span>
+                                                        <div class="actions">
+                                                            <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal" data-bs-target="#exampleModal-Cart"><i
+                                                                class="pe-7s-shopbag"></i></button>
+                                                            <button class="action wishlist" title="Wishlist" data-bs-toggle="modal" data-bs-target="#exampleModal-Wishlist"><i
+                                                                    class="pe-7s-like"></i></button>
+                                                            <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-look"></i></button>
+                                                            <button class="action compare" title="Compare" data-bs-toggle="modal" data-bs-target="#exampleModal-Compare"><i
+                                                                    class="pe-7s-refresh-2"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tab Content Area End -->
+                    <!--  Pagination Area Start -->
+                    <div class="pro-pagination-style text-center text-lg-end" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pages">
+                            <ul>
+                                <li class="li"><a class="page-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                                    <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                                  </svg></a>
+                                </li>
+                                <li class="li"><a class="page-link" href="#">1</a></li>
+                                <li class="li"><a class="page-link active" href="#">2</a></li>
+                                <li class="li"><a class="page-link" href="#">3</a></li>
+                                <li class="li"><a class="page-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708"/>
+                                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708"/>
+                                  </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--  Pagination Area End -->
+                </div>
+                <!-- Shop Bottom Area End -->
+            </div>
+            <!-- Sidebar Area Start -->
+            <div class="col-lg-3 order-lg-first col-md-12 order-md-last">
+                <div class="shop-sidebar-wrap">
+                    <!-- Sidebar single item -->
+                    <div class="sidebar-widget">
+                        <h4 class="sidebar-title">Top Categories</h4>
+                        <div class="sidebar-widget-category">
+                            <ul>
+                                <li><a href="/product/" class="selected m-0"> All
+                                         </a></li>
+                                {% for p in catagory %}
+                                <li><a href="/product/?catagory={{p.id}}" class="selected m-0">{{p.name}}</a></li>
+                                {% endfor %}
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Sidebar single item -->
+                    <div class="sidebar-widget mt-8">
+                        <h4 class="sidebar-title">Price Filter</h4>
+                        <div class="price-filter">
+                            <ul>
+                                {% for j in price %}
+                                <li><a href="/product/?filterprice={{ j.id }}" class="selected m-0">{{ j.price }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar single item -->
+                    
+                    <!-- Sidebar single item -->
+                    
+                    
+                    <!-- Sidebar single item -->
+                    <div class="sidebar-widget">
+                        <h4 class="sidebar-title">Genre</h4>
+                        <div class="sidebar-widget-brand">
+                            <ul>
+                                <li><a href="/product/" class="selected m-0"> All </a></li>
+                                {% for k in brand %}
+                                <li><a href="/product/?brand={{k.id}}" class=""> {{k.name}}</a></li>
+                                {% endfor %}
+                              
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Sidebar single item -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Shop Page End  -->
+{% endblock %}

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zxx" dir="ltr">
+
+
+<!-- Mirrored from template.hasthemes.com/hmart/hmart/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Sep 2021 18:04:02 GMT -->
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHIve eCommerce HTML Template</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Hmart-Smart Product eCommerce html Template">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <!-- CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'assets/css/font.awesome.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/pe-icon-7-stroke.css'%}" />
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/venobox.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.min.css'%}"> 
+    <!-- Style CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Minify Version -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.min.css'%}">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <header>
+            <!-- Header top area start -->
+            <div class="header-top">
+                <div class="container" >
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col">
+                            <div class="welcome-text">
+                                <p>BookHive: Worldwide Buzz, Free Returns & Shipping!</p>
+                            </div>
+                        </div>
+                        <div class="col d-none d-lg-block">
+                            <div class="top-nav">
+                                <ul>
+                                    <li><a href="tel:0123456789"style="display: inline-block; padding-left: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                                      </svg> +012 3456 789</a></li>
+                                    <li><a href="mailto:demo@example.com" style="display: inline-block; padding-left: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                                        <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
+                                        <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
+                                      </svg> bookhive@gmail.com </a></li>
+                                    {% if user.is_authenticated %}
+                                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                                    {% else %}
+
+                                    <li><a href="{% url 'login' %}"style="display: inline-block; padding-left: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                      </svg> Login</a></li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header top area end -->
+            <!-- Header action area start -->
+            <div class="header-bottom  d-none d-lg-block">
+                <div class="container-fluid">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-3 col">
+                            <div class="header-logo">
+                                <a href="index.html"><img src="{% static 'assets\images\logo\bookhive2.png'%}" alt="Site Logo" style="height: 150px;width: 250px;"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-block" >
+                            <div class="search-element">
+                                <form action="/search/" method="get" >
+                                    {% csrf_token %}
+                                    <input type="text" placeholder="Search" name="query" id="query"  />
+                                    <button style="background-color:darkcyan"><i class="pe-7s-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col">
+                            <div class="header-actions">
+                                <!-- Single Wedge Start -->
+                                <a href="#offcanvas-wishlist" class="header-action-btn offcanvas-toggle">
+                                    <i class="pe-7s-like"></i>
+                                </a>
+                                <!-- Single Wedge End -->
+                                <a href="#offcanvas-cart" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                                    <i class="pe-7s-cart"></i>
+                                    <span class="header-action-num">{{request.session.cart|length}}</span>
+                                    <!-- <span class="cart-amount">€30.00</span> -->
+                                </a>
+                                <a href="#offcanvas-cart" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                                      </svg>
+                                    
+                                    <!-- <span class="cart-amount">€30.00</span> -->
+                                </a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header action area end -->
+            <!-- Header action area start -->
+            <div class="header-bottom d-lg-none sticky-nav style-1">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-3 col">
+                            <div class="header-logo">
+                                <a href="index.html"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Site Logo" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="search-element">
+                                <form action="#">
+                                    <input type="text" placeholder="Search" />
+                                    <button><i class="pe-7s-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col">
+                            <div class="header-actions">
+                                <!-- Single Wedge Start -->
+                                <a href="#offcanvas-wishlist" class="header-action-btn offcanvas-toggle">
+                                    <i class="pe-7s-like"></i>
+                                </a>
+                                <!-- Single Wedge End -->
+                                <a href="#offcanvas-cart" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                                    <i class="pe-7s-shopbag"></i>
+                                    <span class="header-action-num">01</span>
+                                    <!-- <span class="cart-amount">€30.00</span> -->
+                                </a>
+                                <a href="#offcanvas-mobile-menu" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                                    <i class="pe-7s-menu2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header action area end -->
+            <!-- header navigation area start -->
+            <div class="header-nav-area d-none d-lg-block sticky-nav">
+                <div class="container-fluid"style="background-color:darkcyan;" >
+                    <div class="header-nav" >
+                        <div class="main-menu position-relative" style="background-color:darkcyan;">
+                            <ul>
+                                <li><a href="{%url 'index' %}">Home <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-add-fill" viewBox="0 0 16 16">
+                                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 1 1-1 0v-1h-1a.5.5 0 1 1 0-1h1v-1a.5.5 0 0 1 1 0"/>
+                                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+                                    <path d="m8 3.293 4.712 4.712A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293z"/>
+                                  </svg></a>
+                                </li>
+                                <li><a href="{% url 'about' %}">About</a></li>
+                               
+                               
+                                <li><a href="{%url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header navigation area end -->
+            <div class="mobile-search-box d-lg-none">
+                <div class="container">
+                    <!-- mobile search start -->
+                    <div class="search-element max-width-100">
+                        <form action="#">
+                            <input type="text" placeholder="Search" />
+                            <button><i class="pe-7s-search"></i></button>
+                        </form>
+                    </div>
+                    <!-- mobile search start -->
+                </div>
+            </div>
+        </header>
+        <!-- offcanvas overlay start -->
+        <div class="offcanvas-overlay"></div>
+        <!-- offcanvas overlay end -->
+        <!-- OffCanvas Wishlist Start -->
+        {% load cart_tag %}
+        <div id="offcanvas-wishlist" class="offcanvas offcanvas-wishlist">
+            <div class="inner">
+                <div class="head">
+                    <span class="title">Wishlist</span>
+                    <button class="offcanvas-close">×</button>
+                </div>
+                <div class="body customScroll">
+                    <ul class="minicart-product-list">
+                        {% if request.session.cart|length < 1 %}
+                        <!-- Empty Cart area start -->
+                        <div class="empty-cart-area pb-100px pt-100px">
+                           <div class="container">
+                               <div class="row">
+                                   <div class="col-md-12">
+                                       <div class="cart-heading">
+                                           <h2>Your cart item</h2>
+                                       </div>
+                                       <div class="empty-text-contant text-center">
+                                           <i class="pe-7s-shopbag"></i>
+                                           <h3>Feeling empty</h3>
+                                           <a class="empty-cart-btn" href="{% url 'product'%}">
+                                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                                                   <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                                 </svg> </i> Continue shopping
+                                           </a>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <!-- Empty Cart area end -->
+                       {%else %}
+                        {% for key,value in request.session.cart.items %}
+                        <li>
+                            <a href="single-product.html" class="image"><img src="{{value.image}}" alt="Cart product Image"></a>
+                            <div class="content">
+                                <a href="single-product.html" class="title">{{value.name}}</a>
+                                <span class="quantity-price">1 x <span class="amount">${{value.price}}</span></span>
+                                <a href="#" class="remove">×</a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="foot">
+                    <div class="buttons">
+                        <a href="{%url 'wishlist' %}" class="btn btn-dark btn-hover-primary mt-30px">view wishlist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OffCanvas Wishlist End -->
+        <!-- OffCanvas Cart Start -->
+        {% load cart_tag %}
+
+        <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
+            <div class="inner">
+                <div class="head">
+                    <span class="title">Cart</span>
+                    <button class="offcanvas-close">×</button>
+                </div>
+                <div class="body customScroll">
+                    <ul class="minicart-product-list">
+                        {% if request.session.cart|length < 1 %}
+ <!-- Empty Cart area start -->
+ <div class="empty-cart-area pb-100px pt-100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="cart-heading">
+                    <h2>Your cart item</h2>
+                </div>
+                <div class="empty-text-contant text-center">
+                    <i class="pe-7s-shopbag"></i>
+                    <h3>No more items in your cart</h3>
+                    <a class="empty-cart-btn" href="{% url 'product'%}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                          </svg> </i> Continue shopping
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Empty Cart area end -->
+{%else %}
+                        {% for key,value in request.session.cart.items %}
+                        <li>
+                            <a href="single-product.html" class="image"><img src="{{value.image}}" alt="Cart product Image"></a>
+                            <div class="content">
+                                <a href="single-product.html" class="title">{{value.name}}</a>
+                                <span class="quantity-price">{{value.quantity}} x <span class="amount">${{value.price}}</span></span>
+                                <a href="{%url 'item_clear' key %}" class="remove">×</a>
+                            </div>
+                        </li>
+                        {% endfor %}
+{% endif %}
+                    </ul>
+                </div>
+                <div class="foot">
+                    <div class="buttons mt-30px">
+                        <a href="{% url 'cart_detail'%}" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>
+                        <a href="{%url 'checkout'%}" class="btn btn-outline-dark current-btn">checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OffCanvas Cart End -->
+        <!-- OffCanvas Menu Start -->
+        <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+            <button class="offcanvas-close"></button>
+            <div class="user-panel">
+                <ul>
+                    <li><a href="tel:0123456789"><i class="fa fa-phone"></i> +012 3456 789</a></li>
+                    <li><a href="mailto:demo@example.com"><i class="fa fa-envelope-o"></i> demo@example.com</a></li>
+                    <li><a href="my-account.html"><i class="fa fa-user"></i> Account</a></li>
+                </ul>
+            </div>
+            <div class="inner customScroll">
+                <div class="offcanvas-menu mb-4">
+                    <ul>
+                        <li><a href="#"><span class="menu-text">Home</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="index.html"><span class="menu-text">Home 1</span></a></li>
+                                <li><a href="index-2.html"><span class="menu-text">Home 2</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li>
+                            <a href="#"><span class="menu-text">Pages</span></a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#"><span class="menu-text">Inner Pages</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="404.html">404 Page</a></li>
+                                        <li><a href="order-tracking.html">Order Tracking</a></li>
+                                        <li><a href="faq.html">Faq Page</a></li>
+                                        <li><a href="coming-soon.html">Coming Soon Page</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="menu-text"> Other Shop Pages</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="cart.html">Cart Page</a></li>
+                                        <li><a href="checkout.html">Checkout Page</a></li>
+                                        <li><a href="compare.html">Compare Page</a></li>
+                                        <li><a href="wishlist.html">Wishlist Page</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="menu-text">Related Shop Page</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="my-account.html">Account Page</a></li>
+                                        <li><a href="login.html">Login & Register Page</a></li>
+                                        <li><a href="empty-cart.html">Empty Cart Page</a></li>
+                                        <li><a href="thank-you-page.html">Thank You Page</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><span class="menu-text">Shop</span></a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#"><span class="menu-text">Shop Page</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="shop-3-column.html">Shop 3 Column</a></li>
+                                        <li><a href="shop-4-column.html">Shop 4 Column</a></li>
+                                        <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
+                                        <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
+                                        <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a>
+                                        </li>
+                                        <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a>
+                                        </li>
+                                        <li><a href="cart.html">Cart Page</a></li>
+                                        <li><a href="checkout.html">Checkout Page</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="menu-text">product Details Page</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="single-product.html">Product Single</a></li>
+                                        <li><a href="single-product-variable.html">Product Variable</a></li>
+                                        <li><a href="single-product-affiliate.html">Product Affiliate</a></li>
+                                        <li><a href="single-product-group.html">Product Group</a></li>
+                                        <li><a href="single-product-tabstyle-2.html">Product Tab 2</a></li>
+                                        <li><a href="single-product-tabstyle-3.html">Product Tab 3</a></li>
+                                        <li><a href="single-product-slider.html">Product Slider</a></li>
+                                        <li><a href="single-product-gallery-left.html">Product Gallery Left</a>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="menu-text">Single Product Page</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="single-product-gallery-right.html">Product Gallery
+                                                Right</a> </li>
+                                        <li><a href="single-product-sticky-left.html">Product Sticky Left</a>
+                                        </li>
+                                        <li><a href="single-product-sticky-right.html">Product Sticky Right</a>
+                                        </li>
+                                        <li><a href="compare.html">Compare Page</a></li>
+                                        <li><a href="wishlist.html">Wishlist Page</a></li>
+                                        <li><a href="my-account.html">Account Page</a></li>
+                                        <li><a href="login.html">Login & Register Page</a></li>
+                                        <li><a href="empty-cart.html">Empty Cart Page</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><span class="menu-text">Blog</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="blog-grid.html">Blog Grid Page</a></li>
+                                <li><a href="blog-grid-left-sidebar.html">Grid Left Sidebar</a></li>
+                                <li><a href="blog-grid-right-sidebar.html">Grid Right Sidebar</a></li>
+                                <li><a href="blog-list.html">Blog List Page</a></li>
+                                <li><a href="blog-list-left-sidebar.html">List Left Sidebar</a></li>
+                                <li><a href="blog-list-right-sidebar.html">List Right Sidebar</a></li>
+                                <li><a href="blog-single.html">Blog Single Page</a></li>
+                                <li><a href="blog-single-left-sidebar.html">Single Left Sidebar</a></li>
+                                <li><a href="blog-single-right-sidebar.html">Single Right Sidbar</a>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- OffCanvas Menu End -->
+                <div class="offcanvas-social mt-auto">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-google"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- OffCanvas Menu End -->
+
+{% block body %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Footer Area Start -->
+ <div class="footer-area">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="container" style="height: 90px;">
+                <div class="row">
+                    <!-- Start single blog -->
+                    <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
+                        <div class="single-wedge">
+                            <p class="about-text">Embark on a Literary Adventure with <span style="font-weight: bold; color: #ff6600;">BookHive</span>: Your Gateway to Captivating Stories and Timeless Classics</p>
+
+                            <ul class="link-follow">
+                                <li>
+                                    <a class="m-0" title="Twitter" target="_blank" rel="noopener noreferrer" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                      </svg></i></a>
+                                </li>
+                                <li>
+                                    <a title="Tumblr" target="_blank" rel="noopener noreferrer" href="#"><svg class="bi bi-tumblr" width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.773 14.423v1.893h-3.468v-7.09h-2.092v-2.04H9.28V0h3.493c.277 0 .52.097.728.29.207.194.31.437.31.73v2.897h2.16v2.04h-2.16v5.303h-1.833z"/>
+                                      </svg>
+                                      
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Facebook" target="_blank" rel="noopener noreferrer" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                                      </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Instagram" target="_blank" rel="noopener noreferrer" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                      </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End single blog -->
+                    <!-- Start single blog -->
+                   
+                    <!-- End single blog -->
+                    <!-- Start single blog -->
+                    <div class="col-md-6 col-lg-3 col-sm-6 mb-lm-30px pl-lg-40px">
+                        <div class="single-wedge">
+                            <h4 class="footer-herading">Account</h4>
+                            <div class="footer-links">
+                                <div class="footer-row">
+                                    <ul class="align-items-center">
+                                        <li class="li"><a class="single-link" href="{% url 'index' %}">Your Account</a></li>
+                                        <li class="li"><a class="single-link" href="{% url 'wishlist' %}">Wishlist</a></li>
+                                        <li class="li"><a class="single-link" href="{% url 'cart_detail'%}">Cart</a></li>
+                                        <li class="li"><a class="single-link" href="{% url 'product' %}">Shop</a></li>
+                                        <li class="li"><a class="single-link" href="{% url 'login' %}">Login</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End single blog -->
+                    <!-- Start single blog -->
+                    <div class="col-md-6 col-lg-3 col-sm-12">
+                        <div class="single-wedge contact-info">
+                            <h4 class="footer-heading">Contact Info</h4>
+                            <div class="footer-links">
+                                <p class="mail">Email: <a href="mailto:demo@example.com">bookhive@yahoo.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- End single blog -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="line-shape-top line-height-1">
+                    <div class="row flex-md-row-reverse align-items-center">
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="payment-mth"><a href="#"><img class="img img-fluid" src="{% static 'assets/images/icons/payment.png' %}" alt="payment-image"></a></div>
+                        </div>
+                        <div class="col-md-6 text-center text-md-start">
+                            <p class="copy-text"> © 2024 <strong>BookHive</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer Area End -->
+</div>
+<!-- Modal -->
+{% for i in product%}
+<div class="modal modal-2 fade" id="exampleModal-{{forloop.counter}}" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="pe-7s-close"></i></button>
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
+                    <!-- Swiper -->
+                    <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="img-responsive m-auto" src="{{i.image.url}}" alt="">
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-6 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-details-content quickview-content">
+                        <h2>{{i.name}}</h2>
+                        <div class="pricing-meta">
+                            <ul class="d-flex">
+                                <li class="new-price">${{i.price}}</li>
+                            </ul>
+                        </div>
+                        <div class="pro-details-rating-wrap">
+                            <div class="rating-product">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </div>
+                            <span class="read-review"><a class="reviews" href="#">( 2 Review )</a></span>
+                        </div>
+                        <p class="mt-30px">{{i.discription}}</p>
+                        <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
+                            <span>Categories: </span>
+                            <ul class="d-flex">
+                                <li>
+                                    <a href="#">{{i.catagory}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
+                            <span>Genre: </span>
+                            <ul class="d-flex">
+                                <li>
+                                    <a href="#">{{i.brand}} </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pro-details-quality">
+                            <div class="cart-plus-minus">
+                                <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" />
+                            </div>
+                            <div class="pro-details-cart">
+                                <button class="add-cart"> Add To
+                                    Cart</button>
+                            </div>
+                            <div class="pro-details-compare-wishlist pro-details-wishlist ">
+                                <a href="wishlist.html"><i class="pe-7s-like"></i></a>
+                            </div>
+                        </div>
+                        <div class="payment-img">
+                            <a href="#"><img src="{% static 'assets/images/icons/payment.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endfor %}
+<!-- Modal end -->
+<!-- Modal Cart -->
+{%for i in product%}
+<div class="modal customize-class fade" id="exampleModal-Cart-{{forloop.counter}}" tabindex="-1"   aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-body text-center">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="pe-7s-close"></i></button>
+            <div class="tt-modal-messages">
+                <i class="pe-7s-check"></i> Added to cart successfully!
+            </div>
+            <div class="tt-modal-product">
+                <div class="tt-img">
+                    <img src="{{i.image.url}}" alt="Modern Smart Phone">
+                </div>
+                <h2 class="tt-title"><a href="#">{{i.name}}</a></h2>
+                <br>
+                <a href="{% url 'cart_add' i.id %}">Add To Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>     
+{% endfor %}
+<!-- Modal wishlist -->
+<div class="modal customize-class fade" id="exampleModal-Wishlist" tabindex="-1"   aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-body text-center">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="pe-7s-close"></i></button>
+            <div class="tt-modal-messages">
+                <i class="pe-7s-check"></i> Added to Wishlist successfully!
+            </div>
+            <div class="tt-modal-product">
+                <div class="tt-img">
+                    <img src="{% static 'assets/images/product-image/1.webp' %}" alt="Modern Smart Phone">
+                </div>
+                <h2 class="tt-title"><a href="#">Modern Smart Phone</a></h2>
+            </div>
+        </div>
+    </div>
+</div>
+</div>    
+
+<!-- Modal compare -->
+<div class="modal customize-class fade" id="exampleModal-Compare" tabindex="-1"   aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-body text-center">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="pe-7s-close"></i></button>
+            <div class="tt-modal-messages">
+                <i class="pe-7s-check"></i> Added to compare successfully!
+            </div>
+            <div class="tt-modal-product">
+                <div class="tt-img">
+                    <img src="{% static 'assets/images/product-image/1.webp' %}" alt="Modern Smart Phone">
+                </div>
+                <h2 class="tt-title"><a href="#">Modern Smart Phone</a></h2>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+ <!-- Global Vendor, plugins JS -->
+    <!-- JS Files
+    ============================================ -->
+    <script src="{% static 'assets/js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-migrate-3.3.2.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/modernizr-3.11.2.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/scrollUp.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/venobox.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/mailchimp-ajax.js' %}"></script>
+
+    <!-- Minify Version -->
+    <script src="{% static 'assets/js/vendor.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.min.js' %}"></script>
+
+    <!--Main JS (Common Activation Codes)-->
+    <!-- <script src="assets/js/main.js"></script> -->
+</body>
+
+
+<!-- Mirrored from template.hasthemes.com/hmart/hmart/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Sep 2021 18:04:06 GMT -->
+</html>

@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block body %}
+ <!-- login area start -->
+ <!-- login area start -->
+ <div class="login-register-area pt-100px pb-100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 ml-auto mr-auto">
+                <div class="login-register-wrapper">
+                    <div class="login-register-tab-list nav">
+                        
+                        <a data-bs-toggle="tab" href="#lg2">
+                            <h4>register</h4>
+                        </a>
+                    </div>
+                    <div class="tab-content">
+                        <div id="lg2" class="tab-pane active">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form action="{% url 'registration' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="text" name="username" placeholder="Username" />
+                                        <input type="text" name="first_name" placeholder="firstname" />
+                                        <input type="text" name="last_name" placeholder="lastname" />
+
+
+                                        <input type="email" name="email" placeholder="email" />
+                                        <input type="password" name="pass1" placeholder="Password" />
+                                        <div class="button-box">
+                                            
+                                            <button type="submit"><span>Login</span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

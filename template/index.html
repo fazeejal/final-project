@@ -1,0 +1,576 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="section ">
+    <div class="hero-slider swiper-container slider-nav-style-1 slider-dot-style-1 ">
+        <!-- Hero slider Active -->
+        <div class="swiper-wrapper">
+            <!-- Single slider item -->
+            <div class="hero-slide-item slider-height-2 swiper-slide bg-color1" data-bg-image="assets/images/hero/bg/hero-bg-2-1.webp">
+                <div class="container h-100">
+                    <div class="row h-100 flex-row-reverse">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 align-self-center sm-center-view">
+                            <div class="hero-slide-content hero-slide-content-2 slider-animated-1">
+                                <h2 class="title-1">Explore Paulo Coelho's <br>
+                                     'The Alchemist' </h2>
+                                <span class="price">
+                                    <span class="mini-title">Only</span>
+                                <span class="amount">$24.00</span>
+                                </span>
+                                <a href="{% url 'product' %}" class="btn btn-primary text-capitalize">Discover Reads</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-center">
+                            <div class="show-case">
+                                <div class="hero-slide-image slider-2">
+                                    <img src="{% static 'assets/images/hero/inner-img/hero1-2.jpg' %}" alt="Hero Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single slider item -->
+            <div class="hero-slide-item slider-height-2 swiper-slide bg-color1" data-bg-image="{% static 'assets/images/hero/bg/hero-bg-2-1.webp' %}">
+                <div class="container h-100">
+                    <div class="row h-100 flex-row-reverse">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 align-self-center sm-center-view">
+                            <div class="hero-slide-content hero-slide-content-2 slider-animated-1">
+                                <h2 class="title-1">Romance Ignites <br>
+                                    Colleen Hoover's It Start with Us </h2>
+                                <span class="price">
+                                    <span class="mini-title">Only</span>
+                                <span class="amount">$20.00</span>
+                                </span>
+                                <a href="{% url 'product' %}" class="btn btn-primary text-capitalize">Discover Reads</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-center">
+                            <div class="show-case">
+                                <div class="hero-slide-image slider-2">
+                                    <img src="{% static 'assets/images/hero/inner-img/hero 1-1.jpg' %}" alt="" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single slider item -->
+            <div class="hero-slide-item slider-height-2 swiper-slide bg-color1" data-bg-image="assets/images/hero/bg/hero-bg-2-1.webp">
+                <div class="container h-100">
+                    <div class="row h-100 flex-row-reverse">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 align-self-center sm-center-view">
+                            <div class="hero-slide-content hero-slide-content-2 slider-animated-1">
+                                <h2 class="title-1">Explore Paulo Coelho's <br>
+                                     'The Alchemist' </h2>
+                                <span class="price">
+                                    <span class="mini-title">Only</span>
+                                <span class="amount">$19.41</span>
+                                </span>
+                                <a href="{% url 'product' %}" class="btn btn-primary text-capitalize">Discover Reads</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-center">
+                            <div class="show-case">
+                                <div class="hero-slide-image slider-2">
+                                    <img src="{% static 'assets/images/hero/inner-img/hero1-2.jpg' %}" alt="Hero Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single slider item -->
+            <div class="hero-slide-item slider-height-2 swiper-slide bg-color1" data-bg-image="{% static 'assets/images/hero/bg/hero-bg-2-1.webp' %}">
+                <div class="container h-100">
+                    <div class="row h-100 flex-row-reverse">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 align-self-center sm-center-view">
+                            <div class="hero-slide-content hero-slide-content-2 slider-animated-1">
+                                <h2 class="title-1">Murphy's <br>
+                                    Self-Confidence </h2>
+                                <span class="price">
+                                    <span class="mini-title">Only</span>
+                                <span class="amount">$13.00</span>
+                                </span>
+                                <a href="shop-left-sidebar.html" class="btn btn-primary text-capitalize">Shop All Books</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-center">
+                            <div class="show-case">
+                                <div class="hero-slide-image slider-2">
+                                    <img src="{% static 'assets/images/hero/inner-img/hero1-3.jpg' %}" alt="Hero Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-buttons">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>
+<!-- Hero/Intro Slider End -->
+<!-- Banner Area Start -->
+<div class="banner-area style-two pt-100px pb-100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="single-banner nth-child-2 mb-lm-30px">
+                    <img src="{% static 'assets\images\banner\abc-removebg-preview.png' %}" alt="my expiriments" >
+                    <div class="banner-content nth-child-3">
+                        <h3 class="title" style="color: black;">Autobiography</h3>
+                        <span class="category" style="color: black;">From $10.00</span>
+                        <a href="{% url 'product' %}" class="shop-link">Shop Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                          </svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="single-banner nth-child-2">
+                    <img src="{% static 'assets\images\banner\112023-chapter-books-under-10-16-9.png' %}" alt="wings of fire" style="height: 525px;">
+                    <div class="banner-content nth-child-2">
+                        <h3 class="title" style="color: black;">Kids books</h3>
+                        <span class="category" style="color: black;">From $15.00</span>
+                        <a href="{% url 'product' %}" class="shop-link">Shop Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                          </svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+<!-- Product Area Start -->
+<div class="product-area pb-100px">
+    <div class="container">
+        <!-- Section Title & Tab Start -->
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title text-center">
+                    <h2 class="title">Best Sellers</h2>
+                    <p>Explore our selection of top-selling books that captivate readers worldwide.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Section Title & Tab End -->
+        <div class="row">
+            <div class="col">
+                <div class="row mb-n-30px">
+                    {% for prod in product %}
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                        <!-- Single Product -->
+                        <div class="product">
+                            <span class="badges">
+                                <span class="new">{{ prod.Condition }}</span>
+                            </span>
+                            <div class="thumb">
+                                <a href="{{prod.id}}" class="image">
+                                    <img src="{{ prod.image.url }}" alt="Banner Image" style="width: 100%;height:350px;">
+                                    <img class="hover-image" src="{{ prod.image.url }}" alt="Product" />
+                                </a>
+                            </div>
+                            <div class="content">
+                                <span class="category"><a href="#">{{ prod.catagory }}</a></span>
+                                <h5 class="title"><a href="{{prod.id}}">{{ prod.name}}</a></h5>
+                                <span class="price">
+                                    <span class="new">${{prod.price}}</span>
+                                </span>
+                            </div>
+                            <div class="actions">
+                                <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal" data-bs-target="#exampleModal-Cart-{{forloop.counter}}">
+                                    <i class="pe-7s-shopbag"></i>
+                                </button>
+                                    <i class="pe-7s-shopbag"></i>
+                                    <button class="action wishlist" title="Wishlist" data-bs-toggle="modal" data-bs-target="#exampleModal-Wishlist-{{forloop.counter}}">
+                                    <i class="pe-7s-like"></i>
+                                </button>
+                                <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal-{{forloop.counter}}">
+                                    <i class="pe-7s-look"></i>
+                                </button>
+                                <button class="action compare" title="Compare" data-bs-toggle="modal" data-bs-target="#exampleModal-Compare">
+                                    <i class="pe-7s-refresh-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+<!-- Product Area End -->
+<!-- Banner Area Start -->
+<div class="banner-area style-three pb-100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="single-banner mb-lm-30px">
+                    <img src="{% static 'assets\images\banner\33691064_1-removebg-preview(2).png'%}" alt="archer" style="height: 500px; width: 500px;">
+                    <div class="banner-content nth-child-3">
+                        <h3 class="title" style="color:whitesmoke;">Dive into Poul'o Ceilo's<br>
+                            Literary Universe!</h3>
+                        <span class="category">From $19.00</span>
+                        <a href="{% url 'product' %}" class="shop-link">Shop Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                          </svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="single-banner">
+                    <img src="{% static 'assets\images\banner\360_F_286747375_8aEZxJFE2zwZajHCt4Pyk8ociTaQgpNe-removebg-preview.png' %}" alt="" style="height: 500px; width: 500px;">
+                    <div class="banner-content nth-child-2">
+                        <h3 class="title" style="color: white; font-weight: bold;">Discover the Magic.</h3>
+                        <span class="category">From $15.00</span>
+                        <a href="{% url 'product' %}" class="shop-link">Shop Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                          </svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+<!-- Feature product area start -->
+<div class="feature-product-area pb-100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title text-center">
+                    <h2 class="title">Featured Offers</h2>
+                    <p>Explore our latest book offers </p>
+                </div>
+            </div>
+        </div>
+        <div class="feature-product-slider swiper-container slider-nav-style-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide feature-right-content">
+                    <div class="image-side">
+                        <img src="{% static 'assets\images\feature-image\51C6FmqWy5L._SY445_SX342_.jpg' %}" alt="" style="height: 380px; width: auto;">
+                       
+                    </div>
+                    <div class="content-side">
+                        <div class="deal-timing" style="width: 200px; ">
+                            <span>End In:</span>
+                            <div id="countdown"></div>
+                        </div>
+                        
+                        <script>
+                            // Set the target date 48 hours from now
+                            const now = new Date();
+                            const targetDate = new Date(now.getTime() + 48 * 60 * 60 * 1000); // 48 hours in milliseconds
+                        
+                            // Update the countdown every second
+                            const countdownElement = document.getElementById('countdown');
+                        
+                            function updateCountdown() {
+                                const currentTime = new Date().getTime();
+                                const distance = targetDate - currentTime;
+                        
+                                if (distance <= 0) {
+                                    clearInterval(timer);
+                                    countdownElement.innerHTML = 'Offer Expired';
+                                } else {
+                                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                        
+                                    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                                }
+                            }
+                        
+                            // Initial call to update the countdown
+                            updateCountdown();
+                        
+                            // Update the countdown every second
+                            const timer = setInterval(updateCountdown, 1000);
+                        </script>
+                        
+                        <div class="prize-content">
+                            <h5 class="title"><a href="single-product.html">Neermathalam Poothakaalam</a></h5>
+                            <span class="price">
+                        <span class="old">$38.50</span>
+                            <span class="new">$28.50</span>
+                            </span>
+                        </div>
+                        <div class="product-feature">
+                            <ul>
+                                <li>Author : <span>Kamala Surayya</span></li>
+                                <li>Genre : <span>Autobiographical</span></li>
+                                <li>Publisher : <span>DC Books</span></li>
+                                <li>Originally published : <span> 1992</span></li>
+                                <li>Language : <span>Malayalam</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide feature-right-content">
+                    <div class="image-side">
+                        <img src="{% static 'assets\images\feature-image\ann.jpg' %}" alt="" style="height: 380px; width: auto;">
+                        
+                    </div>
+                    <div class="content-side">
+                        <div class="deal-timing">
+                            <span>End In:</span>
+                            <div id="countdown2"></div>
+                        </div>
+                        
+                        <script>
+                            // Update the countdown every second for the second image
+                            const countdownElement2 = document.getElementById('countdown2');
+                            let timer2; // Declare the timer variable here
+                        
+                            function updateCountdown2() {
+                                // Set the target date 24 hours from now for the second image
+                                const now2 = new Date();
+                                const targetDate2 = new Date(now2.getTime() + 24 * 60 * 60 * 1000); // 24 hours in milliseconds
+                        
+                                const currentTime2 = new Date().getTime();
+                                const distance2 = targetDate2 - currentTime2;
+                        
+                                if (distance2 <= 0) {
+                                    clearInterval(timer2);
+                                    countdownElement2.innerHTML = 'Offer Expired';
+                                } else {
+                                    const hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                    const minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+                                    const seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+                        
+                                    countdownElement2.innerHTML = `${hours2}h ${minutes2}m ${seconds2}s`;
+                                }
+                            }
+                        
+                            // Initial call to update the countdown for the second image
+                            updateCountdown2();
+                        
+                            // Update the countdown every second for the second image
+                            timer2 = setInterval(updateCountdown2, 1000); // Assign the interval to the timer variable
+                        </script>
+                        <div class="prize-content">
+                            <h5 class="title"><a href="single-product.html">The Diary of a Young Girl</a></h5>
+                            <span class="price">
+                        <span class="old">$33.50</span>
+                            <span class="new">$27.50</span>
+                            </span>
+                        </div>
+                        <div class="product-feature">
+                            <ul>
+                                <li>Author : <span> Anne Frank</span></li>
+                                <li>Genre : <span>Autobiographical</span></li>
+                                <li>Publisher : <span>Diamond Pocket Books</span></li>
+                                <li>Originally published : <span> 1947</span></li>
+                                <li>Language : <span>English</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide feature-right-content">
+                    <div class="image-side">
+                        <img src="{% static 'assets\images\feature-image\images (2).jpg' %}" alt="" style="height: 380px; width: auto;">
+                       
+                    </div>
+                    <div class="content-side">
+                        <div class="deal-timing">
+                            <span>End In:</span>
+                            <div id="countdown3"></div>
+                        </div>
+                        
+                        <script>
+                            // Update the countdown every second for the third image
+                            const countdownElement3 = document.getElementById('countdown3');
+                            let timer3; // Declare the timer variable here
+                        
+                            function updateCountdown3() {
+                                // Set the target date for the third image using the data-countdown attribute
+                                const countdownDate = countdownElement3.getAttribute('data-countdown');
+                                const targetDate3 = new Date(countdownDate);
+                        
+                                const currentTime3 = new Date().getTime();
+                                const distance3 = targetDate3 - currentTime3;
+                        
+                                if (distance3 <= 0) {
+                                    clearInterval(timer3);
+                                    countdownElement3.innerHTML = 'Offer Expired';
+                                } else {
+                                    const days3 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
+                                    const hours3 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                    const minutes3 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
+                                    const seconds3 = Math.floor((distance3 % (1000 * 60)) / 1000);
+                        
+                                    countdownElement3.innerHTML = `${days3}d ${hours3}h ${minutes3}m ${seconds3}s`;
+                                }
+                            }
+                        
+                            // Initial call to update the countdown for the third image
+                            updateCountdown3();
+                        
+                            // Update the countdown every second for the third image
+                            timer3 = setInterval(updateCountdown3, 1000); // Assign the interval to the timer variable
+                        </script>
+                        <div class="prize-content">
+                            <h5 class="title"><a href="single-product.html">Aadujeevitham</a></h5>
+                            <span class="price">
+                        <span class="old">$40.50</span>
+                            <span class="new">$35.50</span>
+                            </span>
+                        </div>
+                        <div class="product-feature">
+                            <ul>
+                                <li>Author : <span> Benyamin</span></li>
+                                <li>Genre : <span>Autobiographical</span></li>
+                                <li>Publisher : <span>Green Books</span></li>
+                                <li>Originally published  : <span>2008</span></li>
+                                <li>Language : <span>Malayalam</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide feature-right-content">
+                    <div class="image-side">
+                        <img src="{% static 'assets\images\feature-image\tom.jpg' %}" alt="" style="height: 380;width: auto;">
+                       
+                    </div>
+                    <div class="content-side">
+                        <div class="deal-timing">
+            <span>End In:</span>
+            <div id="countdown4"></div>
+        </div>
+        
+        <script>
+            // Update the countdown every second for the fourth image
+            const countdownElement4 = document.getElementById('countdown4');
+            let timer4; // Declare the timer variable here
+        
+            function updateCountdown4() {
+                // Set the target date for the fourth image using the data-countdown attribute
+                const countdownDate = countdownElement4.getAttribute('data-countdown');
+                const targetDate4 = new Date(countdownDate);
+        
+                const currentTime4 = new Date().getTime();
+                const distance4 = targetDate4 - currentTime4;
+        
+                if (distance4 <= 0) {
+                    clearInterval(timer4);
+                    countdownElement4.innerHTML = 'Offer Expired';
+                } else {
+                    const days4 = Math.floor(distance4 / (1000 * 60 * 60 * 24));
+                    const hours4 = Math.floor((distance4 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes4 = Math.floor((distance4 % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds4 = Math.floor((distance4 % (1000 * 60)) / 1000);
+        
+                    countdownElement4.innerHTML = `${days4}d ${hours4}h ${minutes4}m ${seconds4}s`;
+                }
+            }
+        
+            // Initial call to update the countdown for the fourth image
+            updateCountdown4();
+        
+            // Update the countdown every second for the fourth image
+            timer4 = setInterval(updateCountdown4, 1000); // Assign the interval to the timer variable
+        </script>
+        
+                        <div class="prize-content">
+                            <h5 class="title"><a href="single-product.html">Tom Lake</a></h5>
+                            <span class="price">
+                        <span class="old">$48.50</span>
+                            <span class="new">$38.50</span>
+                            </span>
+                        </div>
+                        <div class="product-feature">
+                            <ul>
+                                <li>Author : <span> Ann Patchett </span></li>
+                                <li>Genre : <span>Fiction</span></li>
+                                <li>Publisher : <span>Reese's book club</span></li>
+                                <li>Originally published  : <span>2023</span></li>
+                                <li>Language : <span>English</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-buttons">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature product area End -->
+<!-- Fashion Area Start -->
+<div class="fashion-area" data-bg-image="{% static 'assets\images\feature-image\books-01.jpg' %}">
+    <div class="container h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 text-center">
+                <h2 class="title"> <span>Embark</span> on a Literary Journey </h2>
+                <a href="{%url 'product' %}" class="btn btn-primary text-capitalize m-auto">Explore Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fashion Area End -->
+<!-- Feature Area Srart -->
+<div class="feature-area pt-100px pb-100px">
+    <div class="container">
+        <div class="feature-wrapper">
+            <div class="single-feture-col mb-md-30px mb-lm-30px">
+                <!-- single item -->
+                <div class="single-feature">
+                    <div class="feature-icon">
+                        <img src="{% static 'assets/images/icons/1.png' %}" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4 class="title">Free Shipping</h4>
+                        <span class="sub-title">Capped at $39 per order</span>
+                    </div>
+                </div>
+            </div>
+            <!-- single item -->
+            <div class="single-feture-col mb-md-30px mb-lm-30px">
+                <div class="single-feature">
+                    <div class="feature-icon">
+                        <img src="{% static 'assets/images/icons/2.png' %}" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4 class="title">Card Payments</h4>
+                        <span class="sub-title">12 Months Installments</span>
+                    </div>
+                </div>
+            </div>
+            <!-- single item -->
+            <div class="single-feture-col">
+                <div class="single-feature">
+                    <div class="feature-icon">
+                        <img src="{% static 'assets/images/icons/3.png' %}" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4 class="title">Easy Returns</h4>
+                        <span class="sub-title">Shop With Confidence</span>
+                    </div>
+                </div>
+                <!-- single item -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature Area End -->
+
+<!-- Blog area end here -->
+
+{% endblock %}
